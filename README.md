@@ -1,82 +1,41 @@
-# Movie-Recommendation-System-Web-Application
-Building a Movie Recommendation System web application using Django framework and Recommendation technique called Collaborative Filtering 
-- Matrix Factorization Algorithm
+# Movie Recommendation System 🎥
 
-### Screenshot
+A **web-based movie recommendation system** that utilizes **collaborative filtering** and **singular value decomposition (SVD)** to provide personalized movie recommendations to users.
 
-###### Home page
-![home](https://user-images.githubusercontent.com/20842692/45380125-941d7500-b61f-11e8-852d-c09e9586b35b.png)
+## 🚀 Features
 
-###### Recommendation page
-![recom](https://user-images.githubusercontent.com/20842692/45380167-b57e6100-b61f-11e8-8ec0-e07c26daa4a3.jpg)
+- **User Authentication**: Allows users to register, log in, and manage their accounts.
+- **Rate Movies**: Users can rate movies to personalize recommendations.
+- **Personalized Recommendations**: Suggests movies based on user preferences using collaborative filtering.
+- **Interactive Interface**: Clean and user-friendly design for browsing movies and recommendations.
 
-###### Rating page
-![rate](https://user-images.githubusercontent.com/20842692/45380186-be6f3280-b61f-11e8-8ad6-8b967d1cba1a.png)
+## 🛠️ Technologies Used
 
-### Technologies Used
-#### Web Technologies
-- Python
-- HTML 
-- CSS
-- JavaScript
-- Bootstrap 
+- **Backend**: Django (Python)
+- **Frontend**: HTML, CSS, JavaScript (with Bootstrap for styling)
+- **Database**: SQLite (can be replaced with PostgreSQL/MySQL)
+- **Machine Learning**: Scikit-learn (for collaborative filtering and SVD)
 
-#### Python Packages 
-- Django
-- Numpy
-- Pandas 
-- Scipy
+## 📊 Recommendation Algorithm
 
-#### Database
-SQLite
+The system uses **collaborative filtering** to analyze user-movie interactions. Key steps:
+1. **Pivot Matrix Creation**: User ratings are transformed into a matrix format.
+2. **Dimensionality Reduction**: Singular Value Decomposition (SVD) reduces noise and improves prediction accuracy.
+3. **Cosine Similarity**: Identifies similar users based on their rating patterns.
+4. **Personalized Suggestions**: Movies are ranked based on ratings from similar users.
 
-##### Requirements
-```
-python 3.6
-pip3
-virtualenv
-```
+## 📌 Future Enhancements
 
-##### Setup to run
+- Add **content-based filtering** to improve recommendations.
+- Support for **multi-language movies** and **global audiences**.
+- Integration with **external APIs** (e.g., TMDb) for detailed movie information.
+- Deploy the system on platforms like **Heroku** or **AWS**.
 
-- Download zip file to your local machine
-- Extract the zip file
-- Open terminal/cmd promt
-- Goto that Path
+## 🤝 Contributing
 
-Example
+Contributions are welcome! Please fork this repository and submit a pull request with your changes.
 
-```
-cd ~/Destop/Movie-Recommender-System-Web-Application-master
-```
+## 📝 License
 
-Create a new virtual environment in that directory
-```
-python3.6 -m pip install virtualenv
-virtualenv venv -p python3.6
-```
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
 
-Activate virtual environment
-```
-source venv/bin/activate
-```
-
-Command line to install all dependencies
-```
-pip install -r requirements.txt
-```
-
-Then
-```
-cd ../Movie-Recommender-System/MovieRecommendationApp
-```
-
-Command line to run your program
-```
-python manage.py runserver
-```
-
-Now open your browser and go to this address
-```
-http://127.0.0.1:8000
-```
